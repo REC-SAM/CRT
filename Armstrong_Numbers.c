@@ -17,7 +17,10 @@ int findNumberOfDigit ( int num )
 {
     int count = 0;
     while( num > 0 )
-        count /= 10;
+    {
+        num /= 10;
+        ++count;
+    }
     return count;
 }
 
@@ -38,3 +41,9 @@ void printAllArmstrongNumbers ( int max )
             printf("%d ",i);
     }
 }
+
+// Input / Output :-
+// ---------------
+//     Enter the Max range : 10
+//     The Armstrong Numbers are :
+//     0 1 2 3 4 5 6 7 8 9 
